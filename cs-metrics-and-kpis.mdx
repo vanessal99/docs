@@ -1,4 +1,68 @@
 ---
-title: 'CS Metrics & KPIs'
+title: "CS Metrics & KPIs"
 ---
 
+# Signaling CS is Succeeding
+
+I'd track Net Revenue Retention (NRR) as the primary metric. Mintlify's pricing has natural expansion built in - seat overages at \$20/seat, AI Assistant overages at \$0.25/message, tier upgrades, and each additional docs site as a separate subscription. NRR tells you whether CS is driving account growth, not just preventing churn. In the first 30-60 days, I'd establish baselines for each metric before setting targets - metrics without context are just numbers.
+
+<AccordionGroup>
+  <Accordion title="Gross Retention Rate">
+    Separates "are we keeping customers" question from "are we growing them." If retention is low, focus on saving accounts. If retention is high but NRR is flat, focus on expansion. Tells you exactly where to invest.
+  </Accordion>
+  <Accordion title="Expansion Rate by Motion">
+    Which leve is actually driving growth - seats, tier upgrades, AI overages, new sites? Knowing this tells us where to focus proactive conversations. If most growth comes from seat additions, watch utlization closely. If it's tier upgrades, identify Hobby and Pro customers showing enterprise behavior.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  NRR is a lagging indicator - it tells us what already happened. Pair it with leading indicators like publishing velocity and editor activity to catch problems before they show up in revenue.
+</Tip>
+
+# Determing Customer Health
+
+Health should be a composite score built from product usage signals in Mintlify's analytics dashboard. The important thing is reading these signals in context - not just tracking numbers. As Mintlify's Tracking Success guide puts it, high time on page might mean deep engagement or it might mean users are stuck trying to find answers. The same applies to every metric below. (Link to mintlify.com/guides/success)
+
+<AccordionGroup>
+  <Accordion title="Publishing Velocity">
+    This is the single strongest leading indicator of churn. A customer who hasn't pushed an update in 60+ days has likely stopped investing in their docs. If they've stopped maintaining, they've mentally checked out. CSMs should flag any account that goes quiet and reach out with a specific observation, not a generic check-in.
+  </Accordion>
+  <Accordion title="Docs Traffic Trends">
+    Are end users actually visiting the customer's docs? Growing traffic signals a healthy product with growing adoption. Declining traffic could mean the product is losing traction or the docs are being neglected - both worth a conversation. Context matters here too: high views on an error page might signal a product bug, not healthy engagement. (Link to mintlify.com/docs/guides/analytics)
+  </Accordion>
+  <Accordion title="AI Assistant Engagement (Pro & Enterprise)">
+    This one requires nuance. High message volume could mean users are deeply engaged - or it could mean the docs are so poorly written that users can't find answers without the AI as a crutch. The way to tell the difference: use the Assistant's Categories tab to review what's being asked. Advanced questions about edge cases and integrations = healthy. Repeated basic questions like "how do I get started" or "where's my API key" = content problem we should flag. (Link to mintlify.com/docs/ai/assistant)
+  </Accordion>
+  <Accordion title="Editor Seat Utilization">
+    Paying for 5 seats but only 1 person is editing? That's a key person risk. If that champion leaves, the account could churn because nobody else knows how to maintain the site. We should proactively encourage customers to onboard additional contributors, especially non-engineers using the web editor.
+  </Accordion>
+  <Accordion title="Page-Level Feedback">
+    Mintlify's thumbs up/down on individual pages is real-time qualitative data. Consistent negative feedback on specific pages tells us exactly where to intervene before frustration turns into a churn conversation.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+  No single metric tells the full story. Look for patterns across multiple signals - a customer with declining traffic, inactive editors, and basic Assistant questions needs proactive outreach before renewal.
+</Info>
+
+# Prioritizing Feature Requests
+
+The most impactful CS teams don't just relay feature requests - they translate customer pain into business cases. Instead of telling product "five customers want X," say "five accounts representing \$Y in ARR are blocked on expansion because of X, and here's the pattern in the data."
+
+<AccordionGroup>
+  <Accordion title="Expansion Blockers">
+    Track every time a customer says "I'd upgrade if you had X." If multiple accounts are stuck on the same missing feature, that's direct revenue sitting on the table. Mintlify's recent enterprise launch - adding SSO, RBAC, and viewer roles - likely came from exactly this kind of signal from customers who needed enterprise-grade controls before they could commit. (Link to mintlify.com/blog/mintlify-for-enterprise)
+  </Accordion>
+  <Accordion title="Assistant Gaps & Low-Confidence Searches">
+    Mintlify surfaces queries where the Assistant couldn't find an answer and searches with low-confidence results. Aggregate these across customers and you'll find systematic gaps. Mintlify's own engineering team used this exact approach - they analyzed negative Assistant feedback at scale and discovered search quality was the biggest weakness, not response quality. That's the kind of insight CS should be bringing to product. (Link to mintlify.com/blog/assistant-improvements)
+  </Accordion>
+  <Accordion title="Requests Weighted by ARR & Health">
+    Not all requests are equal. A feature request from an enterprise account with a declining health score carries more urgency than the same request from a free-tier user. Simple framework: frequency × revenue × churn risk = priority. This ensures CS is advocating loudest for the features that protect and grow the most valuable accounts.
+  </Accordion>
+  <Accordion title="Category Trends Across Accounts">
+    The Assistant's Categories tab groups user conversations by topic. Zoom out from individual accounts and look at trends across the entire customer base. If a topic like "authentication" or "webhooks" keeps spiking across many customers, Mintlify may need better components or templates for those use cases. This signal is uniquely powerful because it comes from what end users are actually doing, not what customers think they need. (Link to mintlify.com/docs/ai/assistant)
+  </Accordion>
+  <Accordion title="AI Agent Traffic as an Emerging Signal">
+    Mintlify recently launched analytics showing how AI tools like Cursor and Claude consume customer docs. This is still new, but as adoption grows it becomes a valuable prioritization input - if customers are asking for better agent optimization features and the data shows agent traffic is rising across accounts, that's a strong signal to invest in LLMs.txt and MCP tooling. (Link to mintlify.com/blog/agent-analytics)
+  </Accordion>
+</AccordionGroup>
