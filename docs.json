@@ -12,13 +12,8 @@
     "tabs": [
       {
         "tab": "Introduction",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "index"
-            ]
-          }
+        "pages": [
+          "takehome-overview"
         ]
       },
       {
